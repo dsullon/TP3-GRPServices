@@ -1,0 +1,76 @@
+29/08/2017 02:09:46	This log contains information about the import schema operation into project 'GRP.Database' on computer 'VMVS2015W10' by user 'dsullon'.
+29/08/2017 02:09:46	Import of database schema has started.
+29/08/2017 02:09:57	Gathering database options
+29/08/2017 02:09:57	Gathering users
+29/08/2017 02:09:57	Gathering roles
+29/08/2017 02:09:57	Gathering application roles
+29/08/2017 02:09:57	Gathering role memberships
+29/08/2017 02:09:57	Gathering filegroups
+29/08/2017 02:09:57	Gathering full-text catalogs
+29/08/2017 02:09:57	Gathering assemblies
+29/08/2017 02:09:57	Gathering certificates
+29/08/2017 02:09:57	Gathering asymmetric keys
+29/08/2017 02:09:57	Gathering symmetric keys
+29/08/2017 02:09:57	Gathering encrypted symmetric keys
+29/08/2017 02:09:57	Gathering schemas
+29/08/2017 02:09:57	Gathering XML schema collections
+29/08/2017 02:09:57	Gathering user-defined data types
+29/08/2017 02:09:57	Gathering user-defined types
+29/08/2017 02:09:57	Gathering table types
+29/08/2017 02:09:57	Gathering unique keys for table types
+29/08/2017 02:09:57	Gathering primary keys for table types
+29/08/2017 02:09:57	Gathering check constraints for table types
+29/08/2017 02:09:57	Gathering default constraints for table types
+29/08/2017 02:09:57	Gathering partition functions
+29/08/2017 02:09:57	Gathering partition schemes
+29/08/2017 02:09:57	Gathering functions
+29/08/2017 02:09:57	Gathering encrypted functions
+29/08/2017 02:09:57	Gathering aggregates
+29/08/2017 02:09:57	Gathering procedures
+29/08/2017 02:09:57	Gathering encrypted procedures
+29/08/2017 02:09:57	Gathering tables
+29/08/2017 02:09:57	Gathering primary keys
+29/08/2017 02:09:57	Gathering unique constraints
+29/08/2017 02:09:57	Gathering foreign keys
+29/08/2017 02:09:57	Gathering default constraints
+29/08/2017 02:09:57	Gathering check constraints
+29/08/2017 02:09:57	Gathering views
+29/08/2017 02:09:57	Gathering encrypted views
+29/08/2017 02:09:57	Gathering indexes
+29/08/2017 02:09:57	Gathering statistics
+29/08/2017 02:09:57	Gathering full-text index stoplists
+29/08/2017 02:09:57	Gathering search property lists
+29/08/2017 02:09:57	Gathering search properties
+29/08/2017 02:09:57	Gathering full-text indexes
+29/08/2017 02:09:57	Gathering column store indexes
+29/08/2017 02:09:57	Gathering spatial indexes
+29/08/2017 02:09:57	Gathering XML indexes
+29/08/2017 02:09:57	Gathering Selective XML indexes
+29/08/2017 02:09:57	Gathering encrypted triggers
+29/08/2017 02:09:57	Gathering triggers
+29/08/2017 02:09:57	Gathering encrypted and clr ddl triggers
+29/08/2017 02:09:57	Gathering ddl triggers
+29/08/2017 02:09:57	Gathering synonyms
+29/08/2017 02:09:57	Gathering defaults
+29/08/2017 02:09:57	Gathering data constraint uddt bindings
+29/08/2017 02:09:57	Gathering rules
+29/08/2017 02:09:57	Gathering data constraint uddt bindings
+29/08/2017 02:09:57	Gathering message types
+29/08/2017 02:09:57	Gathering queues
+29/08/2017 02:09:57	Gathering contracts
+29/08/2017 02:09:57	Gathering services
+29/08/2017 02:09:57	Gathering event notifications
+29/08/2017 02:09:57	Gathering remote service bindings
+29/08/2017 02:09:57	Gathering broker priorities
+29/08/2017 02:09:57	Gathering signatures
+29/08/2017 02:09:57	Gathering data compression options
+29/08/2017 02:09:57	Gathering sequence types
+29/08/2017 02:09:57	Gathering extended properties
+29/08/2017 02:09:59	Gathering credentials
+29/08/2017 02:09:59	Gathering logins
+29/08/2017 02:09:59	Gathering server audits
+29/08/2017 02:10:00	Scanning project for duplicate elements
+29/08/2017 02:10:00	Finished duplicate element processing
+29/08/2017 02:10:01	Finished importing database.
+29/08/2017 02:10:01	A summary of the import was saved to the following location: C:\tp3\GRP\GRP.Database\Import Schema Logs\GRP.Database_20170829020946.log
+29/08/2017 02:10:01	Click Finish to continue...

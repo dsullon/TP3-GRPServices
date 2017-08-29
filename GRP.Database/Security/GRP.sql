@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [GRP]
+    AUTHORIZATION [dbo];
+

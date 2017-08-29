@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>GRP.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{98b6df81-af59-4c80-99f7-25a201550bbf}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>GRP.Database</RootNamespace>
+    <AssemblyName>GRP.Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="GMK\" />
+    <Folder Include="GMK\Tables\" />
+    <Folder Include="GRP\" />
+    <Folder Include="GRP\Tables\" />
+    <Folder Include="GFR\" />
+    <Folder Include="GFR\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="GMK\Tables\tb_accion.sql" />
+    <Build Include="GMK\Tables\tb_caracteristicaComboVenta.sql" />
+    <Build Include="GMK\Tables\tb_combo.sql" />
+    <Build Include="GMK\Tables\tb_comboLocal.sql" />
+    <Build Include="GMK\Tables\tb_datoEstadisticoEstrategia.sql" />
+    <Build Include="GMK\Tables\tb_encuesta.sql" />
+    <Build Include="GMK\Tables\tb_estrategia.sql" />
+    <Build Include="GMK\Tables\tb_local.sql" />
+    <Build Include="GMK\Tables\tb_medioComunicacion.sql" />
+    <Build Include="GMK\Tables\tb_Objetivo.sql" />
+    <Build Include="GMK\Tables\tb_planMarketing.sql" />
+    <Build Include="GMK\Tables\tb_proyectarPropuestaIndicador.sql" />
+    <Build Include="GMK\Tables\tb_reclamo.sql" />
+    <Build Include="GMK\Tables\tb_resultadoEncuesta.sql" />
+    <Build Include="GMK\Tables\tb_resumenEstudioMercado.sql" />
+    <Build Include="GMK\Tables\tb_rubroAccion.sql" />
+    <Build Include="GMK\Tables\tb_rubroEstrategia.sql" />
+    <Build Include="GMK\Tables\tb_sugerirComboPromocionar.sql" />
+    <Build Include="GRP\Tables\tb_alertasCambiosCostos.sql" />
+    <Build Include="GRP\Tables\tb_tipoArticulo.sql" />
+    <Build Include="GFR\Tables\tb_parametro.sql" />
+    <Build Include="GFR\Tables\tb_solicitante.sql" />
+    <Build Include="GFR\Tables\tb_solicitud.sql" />
+    <Build Include="GFR\Tables\tb_local.sql" />
+    <Build Include="GFR\Tables\tb_sugerencia.sql" />
+    <Build Include="GFR\Tables\tb_usuario.sql" />
+    <Build Include="GRP\Tables\tb_articulo.sql" />
+    <Build Include="GRP\Tables\tb_articuloProducto.sql" />
+    <Build Include="GRP\Tables\tb_carta.sql" />
+    <Build Include="GRP\Tables\tb_cartaCombo.sql" />
+    <Build Include="GRP\Tables\tb_categoria.sql" />
+    <Build Include="GRP\Tables\tb_combo.sql" />
+    <Build Include="GRP\Tables\tb_comboProducto.sql" />
+    <Build Include="GRP\Tables\tb_detalleSolicitudRetiro.sql" />
+    <Build Include="GRP\Tables\tb_detalleVenta.sql" />
+    <Build Include="GRP\Tables\tb_infnutricional.sql" />
+    <Build Include="GRP\Tables\tb_producto.sql" />
+    <Build Include="GRP\Tables\tb_proyeccionVenta.sql" />
+    <Build Include="GRP\Tables\tb_solicitud_articulos.sql" />
+    <Build Include="GRP\Tables\tb_solicitudRetiro.sql" />
+    <Build Include="GRP\Tables\tb_venta.sql" />
+    <Build Include="dbo\Functions\UFN_PASS_DECRIPT.sql" />
+    <Build Include="dbo\Functions\UFN_PASS_ENCRIPT.sql" />
+    <Build Include="dbo\Stored Procedures\USPI_EvaluacionSolicitante.sql" />
+    <Build Include="dbo\Stored Procedures\USPI_ResultadoEvaluacion.sql" />
+    <Build Include="dbo\Stored Procedures\USPS_Login.sql" />
+    <Build Include="dbo\Stored Procedures\USPS_Opcion.sql" />
+    <Build Include="dbo\Stored Procedures\USPS_OpcionXPerfil.sql" />
+    <Build Include="dbo\Stored Procedures\USPS_Parametro.sql" />
+    <Build Include="dbo\Stored Procedures\USPS_Perfil.sql" />
+    <Build Include="dbo\Stored Procedures\USPS_ResultadoEvaluacion.sql" />
+    <Build Include="dbo\Stored Procedures\USPS_Solicitante.sql" />
+    <Build Include="dbo\Stored Procedures\USPS_SolicitanteXEvaluar.sql" />
+    <Build Include="dbo\Stored Procedures\USPS_SolicitudXSolicitante.sql" />
+    <Build Include="dbo\Stored Procedures\USPS_Usuario.sql" />
+    <Build Include="dbo\Stored Procedures\USPU_Solicitud.sql" />
+    <Build Include="Security\GFR.sql" />
+    <Build Include="Security\GMK.sql" />
+    <Build Include="Security\GRP.sql" />
+  </ItemGroup>
+</Project>

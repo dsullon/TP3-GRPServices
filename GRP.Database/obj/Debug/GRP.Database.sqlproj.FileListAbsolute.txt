@@ -1,0 +1,5 @@
+C:\tp3\GRP\GRP.Database\bin\Debug\GRP.Database.dacpac
+C:\tp3\GRP\GRP.Database\obj\Debug\GRP.Database.dll
+C:\tp3\GRP\GRP.Database\obj\Debug\GRP.Database.pdb
+C:\tp3\GRP\GRP.Database\bin\Debug\GRP.Database.dll
+C:\tp3\GRP\GRP.Database\bin\Debug\GRP.Database.pdb

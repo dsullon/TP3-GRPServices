@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [GFR]
+    AUTHORIZATION [dbo];
+

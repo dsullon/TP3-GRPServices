@@ -1,0 +1,4 @@
+C:\tp3\GRP\GRP.Core\bin\Debug\GRP.Core.dll
+C:\tp3\GRP\GRP.Core\bin\Debug\GRP.Core.pdb
+C:\tp3\GRP\GRP.Core\obj\Debug\GRP.Core.dll
+C:\tp3\GRP\GRP.Core\obj\Debug\GRP.Core.pdb

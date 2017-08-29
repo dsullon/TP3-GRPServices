@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [GMK]
+    AUTHORIZATION [dbo];
+
