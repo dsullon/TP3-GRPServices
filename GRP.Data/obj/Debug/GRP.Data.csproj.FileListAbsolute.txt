@@ -1,1 +1,17 @@
 C:\tp3\GRP\GRP.Data\obj\Debug\GRP.Data.csprojResolveAssemblyReference.cache
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\GRP.Data.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\GRP.Data.pdb
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\Dapper.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\GRP.Core.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\GRP.Core.pdb
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\Dapper.xml
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\obj\Debug\GRP.Data.csprojResolveAssemblyReference.cache
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\obj\Debug\GRP.Data.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\obj\Debug\GRP.Data.pdb
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\Newtonsoft.Json.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\System.Net.Http.Formatting.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\System.Web.Cors.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\System.Web.Http.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\Newtonsoft.Json.xml
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\System.Net.Http.Formatting.xml
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Data\bin\Debug\System.Web.Http.xml

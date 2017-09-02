@@ -1,1 +1,17 @@
 C:\tp3\GRP\GRP.Test\obj\Debug\GRP.Test.csprojResolveAssemblyReference.cache
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\obj\Debug\GRP.Test.csprojResolveAssemblyReference.cache
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\GRP.Test.dll.config
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\GRP.Test.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\GRP.Test.pdb
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\GRP.Core.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\GRP.Data.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\GRP.Logic.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\Dapper.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\GRP.Core.pdb
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\GRP.Data.pdb
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\GRP.Logic.pdb
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\bin\Debug\Dapper.xml
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\obj\Debug\GRP.Test.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Test\obj\Debug\GRP.Test.pdb

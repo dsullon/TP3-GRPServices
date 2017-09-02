@@ -2,3 +2,8 @@ C:\tp3\GRP\GRP.Core\bin\Debug\GRP.Core.dll
 C:\tp3\GRP\GRP.Core\bin\Debug\GRP.Core.pdb
 C:\tp3\GRP\GRP.Core\obj\Debug\GRP.Core.dll
 C:\tp3\GRP\GRP.Core\obj\Debug\GRP.Core.pdb
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Core\bin\Debug\GRP.Core.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Core\bin\Debug\GRP.Core.pdb
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Core\obj\Debug\GRP.Core.dll
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Core\obj\Debug\GRP.Core.pdb
+D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Core\obj\Debug\GRP.Core.csprojResolveAssemblyReference.cache

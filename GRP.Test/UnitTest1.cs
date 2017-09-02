@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using GRP.Logic;
+using GRP.Data;
+using GRP.Data.UnitOfWork;
 
 namespace GRP.Test
 {
@@ -10,7 +11,10 @@ namespace GRP.Test
         [TestMethod]
         public void GetData()
         {
-            var data = TipoArticuloBL.Listar();
+            using (var uow = new UnitOfWork())
+            {
+                var tipo = uow.ArticuloRepository.GetAll();
+            }
         }
     }
 }

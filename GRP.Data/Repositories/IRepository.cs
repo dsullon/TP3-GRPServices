@@ -2,12 +2,13 @@
 
 namespace GRP.Data.Repositories
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<TEntity> where TEntity : class
     {
-        IEnumerable<T> GetAll();
-        bool Add(T entity);
-        bool Delete(T entity);
-        bool Update(T entity);
-        T Get(int id);
+        TEntity Get(int Id);
+        IEnumerable<TEntity> GetAll();
+        void Add(TEntity entity);
+        void Remove(TEntity entity);
+        void Remove(int id);
+        void Update(TEntity entity);
     }
 }

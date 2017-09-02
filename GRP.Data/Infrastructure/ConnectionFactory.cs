@@ -6,7 +6,6 @@ namespace GRP.Data.Infrastructure
 {
     public class ConnectionFactory : IConnectionFactory
     {
-        private readonly string connectionString = ConfigurationManager.ConnectionStrings["DTAppCon"].ConnectionString;
         public IDbConnection GetConnection
         {
             get
@@ -15,8 +14,8 @@ namespace GRP.Data.Infrastructure
                 var conn = factory.CreateConnection();
                 DbConnectionStringBuilder builder = new DbConnectionStringBuilder();
                 var server = ConfigurationManager.AppSettings["Server"];
+                var connectionString = string.Format("Server = {0}; Database = db_pardos_dev; user = usr_grp_asullon; password = PJAMqkUz4sBzMg47RWq0", server);
                 conn.ConnectionString = connectionString;
-                conn.Open();
                 return conn;
             }
         }

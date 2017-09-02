@@ -58,10 +58,19 @@
       <Project>{fa2a373b-8879-443a-90d8-bfdf22474713}</Project>
       <Name>GRP.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GRP.Data\GRP.Data.csproj">
+      <Project>{5ca92bb9-b641-4c21-aacf-f9ba45a13ada}</Project>
+      <Name>GRP.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GRP.Logic\GRP.Logic.csproj">
       <Project>{15149426-934e-4470-ab57-ac4d2a624a61}</Project>
       <Name>GRP.Logic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
