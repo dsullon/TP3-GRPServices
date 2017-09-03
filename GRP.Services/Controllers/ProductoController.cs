@@ -4,6 +4,7 @@ using System.Web.Http;
 
 namespace GRP.Services.Controllers
 {
+    [RoutePrefix("api/producto")]
     public class ProductoController : ApiController
     {
         public IHttpActionResult GetAll()
@@ -19,6 +20,17 @@ namespace GRP.Services.Controllers
         public IHttpActionResult Get(int id)
         {
             var resultData = ProductoBL.Get(id);
+            if (resultData == null)
+            {
+                return NotFound();
+            }
+            return Ok(resultData);
+        }
+
+        [Route("{id:int}/details")]
+        public IHttpActionResult GetDetails(int id)
+        {
+            var resultData = ProductoBL.GetDetails(id);
             if (resultData == null)
             {
                 return NotFound();

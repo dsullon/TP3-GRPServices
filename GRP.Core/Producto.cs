@@ -12,6 +12,6 @@ namespace GRP.Core
         public string Elaboracion { get; set; }
         public int Porciones { get; set; }
         public int IdCategoria { get; set; }
-        public List<ProductoArticulo> Insumos { get; set; }
+        public IList<ProductoArticulo> Insumos { get; set; }
     }
 }

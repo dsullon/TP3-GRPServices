@@ -18,6 +18,9 @@ namespace GRP.Data.UnitOfWork
         private ICategoriaRepository _categoriaRepository;
         private IInformacionNutricionalRepository _informacionNutricionalRepository;
         private IProductoArticuloRepository _productoArticuloRepository;
+        private ISolicitudRetiroRepository _solicitudRetiroRepository;
+        private IComboRepository _comboRepository;
+        private IComboSolicitudRetiroRepository _comboSolicitudRetiroRepository;
         private bool _disposed;
 
         #endregion
@@ -75,6 +78,30 @@ namespace GRP.Data.UnitOfWork
             get
             {
                 return _productoArticuloRepository ?? (_productoArticuloRepository = new ProductoArticuloRepository(_transaction));
+            }
+        }
+
+        public ISolicitudRetiroRepository SolicitudRetiroRepository
+        {
+            get
+            {
+                return _solicitudRetiroRepository ?? (_solicitudRetiroRepository = new SolicitudRetiroRepository(_transaction));
+            }
+        }
+
+        public IComboRepository ComboRepository
+        {
+            get
+            {
+                return _comboRepository ?? (_comboRepository = new ComboRepository(_transaction));
+            }
+        }
+
+        public IComboSolicitudRetiroRepository ComboSolicitudRetiroRepository
+        {
+            get
+            {
+                return _comboSolicitudRetiroRepository ?? (_comboSolicitudRetiroRepository = new ComboSolicitudRetiroRepository(_transaction));
             }
         }
 

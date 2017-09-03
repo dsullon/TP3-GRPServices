@@ -26,6 +26,16 @@ namespace GRP.Logic
             return producto;
         }
 
+        public static IEnumerable<dynamic> GetDetails(int id)
+        {
+            IEnumerable<dynamic> lista;
+            using (var uow = new UnitOfWork())
+            {
+                lista = uow.ProductoArticuloRepository.GetAll(id);
+            }
+            return lista;
+        }
+
         public static void Add(Producto producto)
         {
             using (var uow = new UnitOfWork())

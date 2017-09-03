@@ -38,44 +38,27 @@ namespace GRP.Data.Repositories
             );
         }
 
-        public ProductoArticulo Get(int Id)
+        public IEnumerable<dynamic> GetAll(int id)
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("Select codProducto as Id, nombre, elaboracion, umbralCosto as Umbral, ");
-            sql.Append("costo, precio, porciones, codCategoria as IdCategoria ");
-            sql.Append("From GRP.tb_Producto ");
+            sql.Append("Select A.codArticulo as IdArticulo, B.UnidadMedida, ");
+            sql.Append("Costo, Cantidad, Rendimiento, B.Nombre, Cast(((cantidad / Rendimiento) * Costo) as decimal(10,2)) as Importe, ");
+            sql.Append("Cast((C.calorias * Cantidad) as decimal(10,2)) as Calorias, Cast((C.grasas * Cantidad) as decimal(10,2)) as Grasas, ");
+            sql.Append("Cast((C.proteinas * Cantidad) as decimal(10,2)) as Proteinas, Cast((C.carbohidratos * Cantidad) as decimal(10,2)) as Carbohidratos ");
+            sql.Append("From GRP.tb_articuloProducto A Inner Join GRP.tb_articulo B ");
+            sql.Append("On A.codArticulo = B.codArticulo Inner Join GRP.tb_infnutricional C ");
+            sql.Append("On A.codArticulo = C.codArticulo ");
             sql.Append("Where codProducto = @IdProducto");
-            var data = Connection.QueryFirstOrDefault<ProductoArticulo>(sql.ToString(),
+            var lista = Connection.Query(sql.ToString(),
                 param: new
                 {
-                    IdProducto = Id
+                    IdProducto = id
                 },
-                transaction: Transaction);
-            return data;
-        }
-
-        public IEnumerable<ProductoArticulo> GetAll()
-        {
-            StringBuilder sql = new StringBuilder();
-            sql.Append("Select codProducto as Id, nombre, elaboracion, umbralCosto as Umbral, ");
-            sql.Append("costo, precio, porciones, codCategoria as IdCategoria ");
-            sql.Append("From GRP.tb_Producto");
-            var lista = Connection.Query<ProductoArticulo>(sql.ToString(),
                 transaction: Transaction);
             return lista;
         }
 
         public void Remove(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(ProductoArticulo entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(ProductoArticulo entity)
         {
             throw new NotImplementedException();
         }
