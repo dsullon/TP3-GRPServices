@@ -83,7 +83,22 @@ namespace GRP.Data.Repositories
 
         public void Update(Producto entity)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+                throw new ArgumentNullException("entity");
+
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Update GRP.tb_Producto Set porciones = @porciones ");
+            sql.Append("Where codProducto = @producto");
+
+            Connection.Execute(
+                sql.ToString(),
+                param: new
+                {
+                    porciones = entity.Porciones,
+                    producto = entity.Id
+                },
+                transaction: Transaction
+            );
         }
     }
 }

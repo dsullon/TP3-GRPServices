@@ -51,5 +51,22 @@ namespace GRP.Logic
                 uow.Commit();
             }
         }
+
+        public static void Update(Producto producto)
+        {
+            using (var uow = new UnitOfWork())
+            {
+                uow.ProductoArticuloRepository.Remove(producto.Id);
+                uow.ProductoRepository.Update(producto);
+                ProductoArticulo insumo;
+                for (int i = 0; i < producto.Insumos.Count; i++)
+                {
+                    insumo = producto.Insumos[i];
+                    insumo.IdProducto = producto.Id;
+                    uow.ProductoArticuloRepository.Add(insumo);
+                }
+                uow.Commit();
+            }
+        }
     }
 }

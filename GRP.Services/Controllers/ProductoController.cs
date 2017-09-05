@@ -40,8 +40,13 @@ namespace GRP.Services.Controllers
 
         public IHttpActionResult PostProducto(Producto producto)
         {
-            ProductoBL.Add(producto);
-            
+            ProductoBL.Add(producto);            
+            return Ok(producto);
+        }
+
+        public IHttpActionResult PutProducto(Producto producto)
+        {
+            ProductoBL.Update(producto);
             return Ok(producto);
         }
     }

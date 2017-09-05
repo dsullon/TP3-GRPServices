@@ -60,7 +60,17 @@ namespace GRP.Data.Repositories
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Delete From GRP.tb_articuloProducto Where codProducto = @producto");
+
+            Connection.Execute(
+                sql.ToString(),
+                param: new
+                {
+                    producto = id
+                },
+                transaction: Transaction
+            );
         }
     }
 }

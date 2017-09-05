@@ -33,11 +33,17 @@ namespace GRP.Data.Repositories
         public IEnumerable<dynamic> GetAllWithRelations()
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("Select codCombo as Id, A.Nombre, A.Descripcion, Precio, ");
-            sql.Append("Descuento, Estado, A.codCategoria as IdCategoria, ");
-            sql.Append("B.Nombre as Categoria, FechaCreacion, FechaModificacion ");
+            sql.Append("Select A.codCombo as Id, A.Nombre, A.Descripcion, Precio, Descuento, ");
+            sql.Append("A.Estado, A.codCategoria as IdCategoria, B.Nombre as Categoria, ");
+            sql.Append("FechaCreacion, FechaModificacion, C.MontoProyectado, C.PorcentajeAporte, ");
+            sql.Append("D.MetaAnual, C.codProyeccion as IdProyeccion, ");
+            sql.Append("IsNull((Select SUM((z.cantidad * z.precio)-z.descuento) From GRP.tb_detalleventa Z ");
+            sql.Append("Inner Join GRP.tb_venta Y On Z.codVenta = Y.codventa Where Z.codCombo = A.codCombo ");
+            sql.Append("And Year(Y.fechaVenta) = D.periodo),0) As VentaPeriodo ");
             sql.Append("From GRP.tb_combo A Inner Join GRP.tb_categoria B ");
-            sql.Append("On A.codCategoria = B.codCategoria ");
+            sql.Append("On A.codCategoria = B.codCategoria Inner Join GRP.tb_proyeccioncombo C ");
+            sql.Append("On A.codCombo = C.codCombo Inner Join GRP.tb_proyeccion D ");
+            sql.Append("On C.codProyeccion = D.codProyeccion And D.estado = 1");
             var lista = Connection.Query(sql.ToString(),
                 transaction: Transaction);
             return lista;
