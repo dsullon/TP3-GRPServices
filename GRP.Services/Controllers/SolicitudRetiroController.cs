@@ -29,8 +29,15 @@ namespace GRP.Services.Controllers
 
         public IHttpActionResult PostSolicitudRetiro(SolicitudRetiro solicitud)
         {
-            SolicitudRetiroBL.Add(solicitud);
-            return Ok(solicitud);
+            try
+            {
+                SolicitudRetiroBL.Add(solicitud);
+                return Ok(solicitud);
+            }
+            catch (System.Exception ex)
+            {
+                return InternalServerError(ex);
+            }
         }
     }
 }

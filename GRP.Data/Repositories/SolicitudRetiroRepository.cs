@@ -21,15 +21,15 @@ namespace GRP.Data.Repositories
                 throw new ArgumentNullException("entity");
 
             StringBuilder sql = new StringBuilder();
-            sql.Append("Insert into GRP.tb_solicitudRetiro(fechaEnvio, comentario, codProyecccion, tipoSimulacion, estado)");
-            sql.Append("values(@fechaEnvio, @comentario, @proyeccion, @tipo, estado)");
+            sql.Append("Insert into GRP.tb_solicitudRetiro(fechaEnvio, comentario, codProyeccion, tipoSimulacion, estado)");
+            sql.Append("values(@fechaEnvio, @comentario, @proyeccion, @tipo, @estado)");
             sql.Append("SELECT SCOPE_IDENTITY()");
 
             entity.Id = Connection.ExecuteScalar<int>(
                 sql.ToString(),
                 param: new
                 {
-                    fechaEnvio = entity.FechaEnvio,
+                    fechaEnvio = DateTime.Now,
                     comentario = entity.Comentario,
                     proyeccion = entity.IdProyeccion,
                     tipo = entity.TipoSimulacion,
