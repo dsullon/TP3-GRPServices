@@ -71,6 +71,23 @@ namespace GRP.Data.Repositories
             return lista;
         }
 
+        public IEnumerable<dynamic> GetPerItem(int Id)
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Select A.codProducto as Id, nombre, elaboracion, umbralCosto as Umbral, ");
+            sql.Append("A.costo, precio, porciones, codCategoria as IdCategoria ");
+            sql.Append("From GRP.tb_Producto A Inner Join GRP.tb_articuloProducto B ");
+            sql.Append("On A.codProducto = B.codProducto ");
+            sql.Append("Where B.codArticulo = @articulo");
+            var lista = Connection.Query(sql.ToString(),
+                param: new
+                {
+                    articulo = Id
+                },
+                transaction: Transaction);
+            return lista;
+        }
+
         public void Remove(int id)
         {
             throw new NotImplementedException();

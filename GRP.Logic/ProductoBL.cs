@@ -36,6 +36,16 @@ namespace GRP.Logic
             return lista;
         }
 
+        public static IEnumerable<dynamic> GetPerItem(int id)
+        {
+            IEnumerable<dynamic> lista;
+            using (var uow = new UnitOfWork())
+            {
+                lista = uow.ProductoRepository.GetPerItem(id);
+            }
+            return lista;
+        }
+
         public static void Add(Producto producto)
         {
             using (var uow = new UnitOfWork())

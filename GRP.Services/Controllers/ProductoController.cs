@@ -38,6 +38,17 @@ namespace GRP.Services.Controllers
             return Ok(resultData);
         }
 
+        [Route("item/{id:int}")]
+        public IHttpActionResult GetPerItem(int id)
+        {
+            var resultData = ProductoBL.GetPerItem(id);
+            if (resultData == null)
+            {
+                return NotFound();
+            }
+            return Ok(resultData);
+        }
+
         public IHttpActionResult PostProducto(Producto producto)
         {
             ProductoBL.Add(producto);            
