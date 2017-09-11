@@ -36,6 +36,34 @@ namespace GRP.Data.Repositories
             return lista;
         }
 
+        public IEnumerable<dynamic> GetUmbral()
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Select a.codArticulo as Id, nombre as Nombre, Descripcion, CostoXUM, ");
+            sql.Append("TipoVariacion, FechaAlerta, NuevoCosto From[GRP].[tb_articulo] a ");
+            sql.Append("Inner Join[GRP].[tb_alertasCambiosCostos] al on a.CodArticulo = al.codArticulo ");
+            sql.Append("Where al.estado = 'Pendiente'");
+            var lista = Connection.Query(sql.ToString(),
+                transaction: Transaction);
+            return lista;
+        }
+
+        public dynamic GetUmbralPerId(int Id)
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Select a.codArticulo as Id, nombre as Nombre, Descripcion, CostoXUM, ");
+            sql.Append("TipoVariacion, FechaAlerta, NuevoCosto From[GRP].[tb_articulo] a ");
+            sql.Append("Inner Join[GRP].[tb_alertasCambiosCostos] al on a.CodArticulo = al.codArticulo ");
+            sql.Append("Where al.estado = 'Pendiente' and a.codArticulo = @IdProducto");
+            var data = Connection.QueryFirstOrDefault<dynamic>(sql.ToString(),
+                param: new
+                {
+                    IdProducto = Id
+                },
+                transaction: Transaction);
+            return data;
+        }
+
         public void Remove(int id)
         {
             throw new NotImplementedException();

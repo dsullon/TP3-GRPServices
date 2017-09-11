@@ -13,7 +13,7 @@ namespace GRP.Test
         {
             using (var uow = new UnitOfWork())
             {
-                var tipo = uow.ArticuloRepository.GetAll();
+                var tipo = uow.ArticuloRepository.GetUmbralPerId(4);
             }
         }
     }

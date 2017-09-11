@@ -63,9 +63,10 @@ namespace GRP.Data.Repositories
         public IEnumerable<Producto> GetAll()
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("Select codProducto as Id, nombre, elaboracion, umbralCosto as Umbral, ");
-            sql.Append("costo, precio, porciones, codCategoria as IdCategoria ");
-            sql.Append("From GRP.tb_Producto");
+            sql.Append("Select codProducto as Id, A.nombre, elaboracion, umbralCosto as Umbral, ");
+            sql.Append("costo, precio, porciones, A.codCategoria as IdCategoria, B.Nombre as Categoria ");
+            sql.Append("From GRP.tb_Producto A Inner Join GRP.tb_categoria B ");
+            sql.Append("On A.codCategoria = B.codCategoria ");
             var lista = Connection.Query<Producto>(sql.ToString(),
                 transaction: Transaction);
             return lista;
@@ -90,12 +91,23 @@ namespace GRP.Data.Repositories
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Update GRP.tb_Producto set estado = 0 ");
+            sql.Append("Where codProducto = @IdProducto");
+            var data = Connection.QueryFirstOrDefault<Producto>(sql.ToString(),
+                param: new
+                {
+                    IdProducto = id
+                },
+                transaction: Transaction);
         }
 
         public void Remove(Producto entity)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+                throw new ArgumentNullException("entity");
+
+            Remove(entity.Id);
         }
 
         public void Update(Producto entity)
@@ -104,14 +116,19 @@ namespace GRP.Data.Repositories
                 throw new ArgumentNullException("entity");
 
             StringBuilder sql = new StringBuilder();
-            sql.Append("Update GRP.tb_Producto Set porciones = @porciones ");
-            sql.Append("Where codProducto = @producto");
+            sql.Append("Update GRP.tb_Producto Set porciones = @porciones, ");
+            sql.Append("codCategoria = @categoria, nombre = @nombre, costo = @costo, ");
+            sql.Append("precio = @precio Where codProducto = @producto");
 
             Connection.Execute(
                 sql.ToString(),
                 param: new
                 {
                     porciones = entity.Porciones,
+                    categoria = entity.IdCategoria,
+                    nombre = entity.Nombre,
+                    costo = entity.Costo,
+                    precio = entity.Precio,
                     producto = entity.Id
                 },
                 transaction: Transaction
