@@ -39,7 +39,7 @@ namespace GRP.Services.Controllers
         }
 
         [Route("item/{id:int}")]
-        public IHttpActionResult GetPerItem(int id)
+        public IHttpActionResult GetPerItem([FromBody]int[] id)
         {
             var resultData = ProductoBL.GetPerItem(id);
             if (resultData == null)

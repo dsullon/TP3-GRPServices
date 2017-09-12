@@ -36,7 +36,7 @@ namespace GRP.Logic
             return lista;
         }
 
-        public static IEnumerable<dynamic> GetPerItem(int id)
+        public static IEnumerable<dynamic> GetPerItem(int[] id)
         {
             IEnumerable<dynamic> lista;
             using (var uow = new UnitOfWork())

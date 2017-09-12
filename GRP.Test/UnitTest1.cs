@@ -11,9 +11,11 @@ namespace GRP.Test
         [TestMethod]
         public void GetData()
         {
+            int[] array = { 1, 2, 3, 4, 5 };
+
             using (var uow = new UnitOfWork())
             {
-                var tipo = uow.ArticuloRepository.GetUmbralPerId(4);
+                var tipo = uow.ProductoRepository.GetPerItem(array);
             }
         }
     }

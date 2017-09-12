@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using System.Linq;
 
 namespace GRP.Data.Repositories
 {
@@ -72,18 +73,19 @@ namespace GRP.Data.Repositories
             return lista;
         }
 
-        public IEnumerable<dynamic> GetPerItem(int Id)
+        public IEnumerable<dynamic> GetPerItem(int[] Id)
         {
+            string ids = String.Join(",", Id.Select(p => p.ToString()).ToArray());
             StringBuilder sql = new StringBuilder();
             sql.Append("Select A.codProducto as Id, nombre, elaboracion, umbralCosto as Umbral, ");
             sql.Append("A.costo, precio, porciones, codCategoria as IdCategoria ");
             sql.Append("From GRP.tb_Producto A Inner Join GRP.tb_articuloProducto B ");
             sql.Append("On A.codProducto = B.codProducto ");
-            sql.Append("Where B.codArticulo = @articulo");
+            sql.Append("Where B.codArticulo in (@articulo)");
             var lista = Connection.Query(sql.ToString(),
                 param: new
                 {
-                    articulo = Id
+                    articulo = ids
                 },
                 transaction: Transaction);
             return lista;
