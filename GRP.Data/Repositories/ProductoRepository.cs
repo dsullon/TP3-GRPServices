@@ -81,7 +81,9 @@ namespace GRP.Data.Repositories
             sql.Append("A.costo, precio, porciones, codCategoria as IdCategoria ");
             sql.Append("From GRP.tb_Producto A Inner Join GRP.tb_articuloProducto B ");
             sql.Append("On A.codProducto = B.codProducto ");
-            sql.Append("Where B.codArticulo in (@articulo)");
+            sql.Append("Where (',' + @articulo + ',' LIKE '%,' + CONVERT(nvarchar(MAX), B.codArticulo) + ',%')");
+
+            
             var lista = Connection.Query(sql.ToString(),
                 param: new
                 {
