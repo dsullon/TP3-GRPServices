@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [GRP].[tb_combo] (
-    [codCombo]          BIGINT          NOT NULL,
+    [codCombo]          BIGINT          NOT NULL IDENTITY,
     [nombre]            VARCHAR (120)   NULL,
     [descripcion]       VARCHAR (120)   NULL,
     [precio]            DECIMAL (10, 2) NULL,

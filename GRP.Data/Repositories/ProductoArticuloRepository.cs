@@ -42,7 +42,7 @@ namespace GRP.Data.Repositories
         {
             StringBuilder sql = new StringBuilder();
             sql.Append("Select A.codArticulo as IdArticulo, B.UnidadMedida, ");
-            sql.Append("Costo, Cantidad, Rendimiento, B.Nombre, Cast(((cantidad / Rendimiento) * Costo) as decimal(10,2)) as Importe, ");
+            sql.Append("Costo, Cantidad, Rendimiento, B.Nombre, Cast(((cantidad / (Rendimiento/100)) * Costo) as decimal(10,2)) as Importe, ");
             sql.Append("Cast((C.calorias * Cantidad) as decimal(10,2)) as Calorias, Cast((C.grasas * Cantidad) as decimal(10,2)) as Grasas, ");
             sql.Append("Cast((C.proteinas * Cantidad) as decimal(10,2)) as Proteinas, Cast((C.carbohidratos * Cantidad) as decimal(10,2)) as Carbohidratos ");
             sql.Append("From GRP.tb_articuloProducto A Inner Join GRP.tb_articulo B ");

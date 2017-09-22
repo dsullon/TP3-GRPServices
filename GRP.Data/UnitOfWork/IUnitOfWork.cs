@@ -13,6 +13,7 @@ namespace GRP.Data.UnitOfWork
         IProductoArticuloRepository ProductoArticuloRepository { get; }
         ISolicitudRetiroRepository SolicitudRetiroRepository { get; }
         IComboRepository ComboRepository { get; }
+        IComboProductoRepository ComboProductoRepository { get; }
         IComboSolicitudRetiroRepository ComboSolicitudRetiroRepository { get; }
         void Commit();
     }

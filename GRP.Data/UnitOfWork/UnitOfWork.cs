@@ -15,11 +15,12 @@ namespace GRP.Data.UnitOfWork
         private ITipoArticuloRepository _tipoArticuloRepository;
         private IArticuloRepository _articuloRepository;
         private IProductoRepository _productoRepository;
+        private IProductoArticuloRepository _productoArticuloRepository;
         private ICategoriaRepository _categoriaRepository;
         private IInformacionNutricionalRepository _informacionNutricionalRepository;
-        private IProductoArticuloRepository _productoArticuloRepository;
         private ISolicitudRetiroRepository _solicitudRetiroRepository;
         private IComboRepository _comboRepository;
+        private IComboProductoRepository _comboProductoRepository;
         private IComboSolicitudRetiroRepository _comboSolicitudRetiroRepository;
         private bool _disposed;
 
@@ -94,6 +95,14 @@ namespace GRP.Data.UnitOfWork
             get
             {
                 return _comboRepository ?? (_comboRepository = new ComboRepository(_transaction));
+            }
+        }
+
+        public IComboProductoRepository ComboProductoRepository
+        {
+            get
+            {
+                return _comboProductoRepository ?? (_comboProductoRepository = new ComboProductoRepository(_transaction));
             }
         }
 

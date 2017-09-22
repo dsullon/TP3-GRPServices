@@ -8,7 +8,7 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
-    <NameOfLastUsedPublishProfile>GRPWebApi - Web Deploy</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>grpwebapi2 - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

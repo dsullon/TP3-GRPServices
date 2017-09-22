@@ -17,17 +17,59 @@ namespace GRP.Data.Repositories
 
         public void Add(Combo entity)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+                throw new ArgumentNullException("entity");
+
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Insert into GRP.tb_combo(nombre, descripcion, precio, descuento, ");
+            sql.Append("estado, codCategoria, fechaCreacion, fechaModificacion)");
+            sql.Append("values(@nombre, @descripcion, @precio, @descuento, ");
+            sql.Append("@estado, @categoria, @creacion)");
+            sql.Append("SELECT SCOPE_IDENTITY()");
+
+            entity.Id = Connection.ExecuteScalar<int>(
+                sql.ToString(),
+                param: new
+                {
+                    nombre = entity.Nombre,
+                    descripcion = entity.Descripcion,
+                    precio = entity.Precio,
+                    descuento = entity.Descuento,
+                    estado = 1,
+                    categoria = entity.IdCategoria,
+                    creacion = DateTime.Now
+                },
+                transaction: Transaction
+            );
         }
 
         public Combo Get(int Id)
         {
-            throw new NotImplementedException();
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Select codCombo as Id, Nombre, Descripcion, Precio, Descuento, ");
+            sql.Append("Estado, codCategoria as IdCategoria, FechaCreacion, FechaModificacion ");
+            sql.Append("From GRP.tb_combo ");
+            sql.Append("Where codCombo = @IdCombo");
+            var data = Connection.QueryFirstOrDefault<Combo>(sql.ToString(),
+                param: new
+                {
+                    IdCombo = Id
+                },
+                transaction: Transaction);
+            return data;
         }
 
         public IEnumerable<Combo> GetAll()
         {
-            throw new NotImplementedException();
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Select A.codCombo as Id, A.Nombre, A.Descripcion, Precio, Descuento, ");
+            sql.Append("A.Estado, A.codCategoria as IdCategoria, B.Nombre as Categoria, ");
+            sql.Append("FechaCreacion, FechaModificacion ");
+            sql.Append("From GRP.tb_combo A Inner Join GRP.tb_categoria B ");
+            sql.Append("On A.codCategoria = B.codCategoria");
+            var lista = Connection.Query<Combo>(sql.ToString(),
+                transaction: Transaction);
+            return lista;
         }
 
         public IEnumerable<dynamic> GetAllWithRelations()

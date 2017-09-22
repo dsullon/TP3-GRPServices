@@ -39,6 +39,7 @@
     <Compile Include="Articulo.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="Combo.cs" />
+    <Compile Include="ComboProducto.cs" />
     <Compile Include="ComboSolicitudRetiro.cs" />
     <Compile Include="InformacionNutricional.cs" />
     <Compile Include="Producto.cs" />

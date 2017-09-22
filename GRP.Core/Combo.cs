@@ -15,7 +15,10 @@ namespace GRP.Core
         public decimal Descuento { get; set; }
         public bool Estado { get; set; }
         public int IdCategoria { get; set; }
+        public string Categoria { get; set; }
         public DateTime FechaCreacion { get; set; }
         public DateTime FechaModificacion { get; set; }
+
+        public IList<ComboProducto> Productos { get; set; }
     }
 }
