@@ -3,3 +3,9 @@ D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Core\bin\Release\GRP.Core.pdb
 D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Core\obj\Release\GRP.Core.dll
 D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Core\obj\Release\GRP.Core.pdb
 D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Core\obj\Release\GRP.Core.csprojResolveAssemblyReference.cache
+D:\grpservices\GRP.Core\bin\Release\GRP.Core.dll
+D:\grpservices\GRP.Core\bin\Release\GRP.Core.pdb
+D:\grpservices\GRP.Core\obj\Release\GRP.Core.csprojResolveAssemblyReference.cache
+D:\grpservices\GRP.Core\obj\Release\GRP.Core.csproj.CoreCompileInputs.cache
+D:\grpservices\GRP.Core\obj\Release\GRP.Core.dll
+D:\grpservices\GRP.Core\obj\Release\GRP.Core.pdb

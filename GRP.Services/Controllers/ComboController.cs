@@ -54,5 +54,11 @@ namespace GRP.Services.Controllers
             ComboBL.Add(combo);
             return Ok(combo);
         }
+
+        public IHttpActionResult PutCombo(Combo combo)
+        {
+            ComboBL.Update(combo);
+            return Ok(combo);
+        }
     }
 }

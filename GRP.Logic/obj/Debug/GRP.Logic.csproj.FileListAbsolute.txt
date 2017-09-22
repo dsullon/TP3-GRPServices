@@ -10,3 +10,15 @@ D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Logic\bin\Debug\GRP.Data.pdb
 D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Logic\bin\Debug\Dapper.xml
 D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Logic\obj\Debug\GRP.Logic.dll
 D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Logic\obj\Debug\GRP.Logic.pdb
+D:\grpservices\GRP.Logic\bin\Debug\GRP.Logic.dll
+D:\grpservices\GRP.Logic\bin\Debug\GRP.Logic.pdb
+D:\grpservices\GRP.Logic\bin\Debug\GRP.Core.dll
+D:\grpservices\GRP.Logic\bin\Debug\GRP.Data.dll
+D:\grpservices\GRP.Logic\bin\Debug\Dapper.dll
+D:\grpservices\GRP.Logic\bin\Debug\GRP.Core.pdb
+D:\grpservices\GRP.Logic\bin\Debug\GRP.Data.pdb
+D:\grpservices\GRP.Logic\bin\Debug\Dapper.xml
+D:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.csprojResolveAssemblyReference.cache
+D:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.csproj.CoreCompileInputs.cache
+D:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.dll
+D:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.pdb

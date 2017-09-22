@@ -12,6 +12,7 @@ namespace GRP.Core
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }
+        public decimal PrecioVenta { get; set; }
         public decimal Descuento { get; set; }
         public bool Estado { get; set; }
         public int IdCategoria { get; set; }

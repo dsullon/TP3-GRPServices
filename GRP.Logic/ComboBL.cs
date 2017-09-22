@@ -61,5 +61,22 @@ namespace GRP.Logic
                 uow.Commit();
             }
         }
+
+        public static void Update(Combo combo)
+        {
+            using (var uow = new UnitOfWork())
+            {
+                uow.ComboProductoRepository.Remove(combo.Id);
+                uow.ComboRepository.Update(combo);
+                ComboProducto producto;
+                for (int i = 0; i < combo.Productos.Count; i++)
+                {
+                    producto = combo.Productos[i];
+                    producto.IdCombo = combo.Id;
+                    uow.ComboProductoRepository.Add(producto);
+                }
+                uow.Commit();
+            }
+        }
     }
 }

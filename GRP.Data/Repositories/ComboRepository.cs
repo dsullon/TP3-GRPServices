@@ -23,7 +23,7 @@ namespace GRP.Data.Repositories
             StringBuilder sql = new StringBuilder();
             sql.Append("Insert into GRP.tb_combo(nombre, descripcion, precio, descuento, ");
             sql.Append("estado, codCategoria, fechaCreacion, fechaModificacion)");
-            sql.Append("values(@nombre, @descripcion, @precio, @descuento, ");
+            sql.Append("values(@nombre, @descripcion, @precio, @precioVenta, @descuento, ");
             sql.Append("@estado, @categoria, @creacion)");
             sql.Append("SELECT SCOPE_IDENTITY()");
 
@@ -34,6 +34,7 @@ namespace GRP.Data.Repositories
                     nombre = entity.Nombre,
                     descripcion = entity.Descripcion,
                     precio = entity.Precio,
+                    precioVenta = entity.PrecioVenta,
                     descuento = entity.Descuento,
                     estado = 1,
                     categoria = entity.IdCategoria,
@@ -46,7 +47,8 @@ namespace GRP.Data.Repositories
         public Combo Get(int Id)
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("Select codCombo as Id, Nombre, Descripcion, Precio, Descuento, ");
+            sql.Append("Select codCombo as Id, Nombre, Descripcion, Precio, IsNull(Descuento,0) as Descuento, ");
+            sql.Append("Cast(Precio - (Precio * (IsNull(Descuento,0)/100)) as decimal(10,2)) as PrecioVenta, ");
             sql.Append("Estado, codCategoria as IdCategoria, FechaCreacion, FechaModificacion ");
             sql.Append("From GRP.tb_combo ");
             sql.Append("Where codCombo = @IdCombo");
@@ -62,7 +64,8 @@ namespace GRP.Data.Repositories
         public IEnumerable<Combo> GetAll()
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("Select A.codCombo as Id, A.Nombre, A.Descripcion, Precio, Descuento, ");
+            sql.Append("Select A.codCombo as Id, A.Nombre, A.Descripcion, Precio, IsNull(Descuento,0) as Descuento, ");
+            sql.Append("Cast(Precio - (Precio * (IsNull(Descuento,0)/100)) as decimal(10,2)) as PrecioVenta, ");
             sql.Append("A.Estado, A.codCategoria as IdCategoria, B.Nombre as Categoria, ");
             sql.Append("FechaCreacion, FechaModificacion ");
             sql.Append("From GRP.tb_combo A Inner Join GRP.tb_categoria B ");
@@ -75,7 +78,7 @@ namespace GRP.Data.Repositories
         public IEnumerable<dynamic> GetAllWithRelations()
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("Select A.codCombo as Id, A.Nombre, A.Descripcion, Precio, Descuento, ");
+            sql.Append("Select A.codCombo as Id, A.Nombre, A.Descripcion, Precio, PrecioVenta, Descuento, ");
             sql.Append("A.Estado, A.codCategoria as IdCategoria, B.Nombre as Categoria, ");
             sql.Append("FechaCreacion, FechaModificacion, C.MontoProyectado, C.PorcentajeAporte, ");
             sql.Append("D.MetaAnual, C.codProyeccion as IdProyeccion, ");
@@ -103,7 +106,27 @@ namespace GRP.Data.Repositories
 
         public void Update(Combo entity)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+                throw new ArgumentNullException("entity");
+
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Update GRP.tb_combo Set nombre = @nombre, descripcion = @descripcion, precio = @precio, ");
+            sql.Append("descuento = @descuento, codCategoria = @categoria ");
+            sql.Append("Where codCombo = @combo");
+
+            Connection.Execute(
+                sql.ToString(),
+                param: new
+                {
+                    nombre = entity.Nombre,
+                    descripcion = entity.Descripcion,
+                    precio = entity.Precio,
+                    descuento = entity.Descuento,
+                    categoria = entity.IdCategoria,
+                    combo = entity.Id
+                },
+                transaction: Transaction
+            );
         }
     }
 }
