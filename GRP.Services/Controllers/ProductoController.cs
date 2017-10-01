@@ -38,8 +38,8 @@ namespace GRP.Services.Controllers
             return Ok(resultData);
         }
 
-        [Route("item/{id:int}")]
-        public IHttpActionResult GetPerItem([FromBody]int[] id)
+        [Route("item")]
+        public IHttpActionResult GetPerItem([FromUri]int[] id)
         {
             var resultData = ProductoBL.GetPerItem(id);
             if (resultData == null)
