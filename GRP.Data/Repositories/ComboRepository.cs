@@ -102,6 +102,10 @@ namespace GRP.Data.Repositories
 
             Connection.Execute(
                 sql.ToString(),
+                param: new
+                {
+                    combo = id
+                },
                 transaction: Transaction
             );
         }
