@@ -96,7 +96,14 @@ namespace GRP.Data.Repositories
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            StringBuilder sql = new StringBuilder();
+            sql.Append("Update GRP.tb_combo Set estado = 0 ");
+            sql.Append("Where codCombo = @combo");
+
+            Connection.Execute(
+                sql.ToString(),
+                transaction: Transaction
+            );
         }
 
         public void Remove(Combo entity)

@@ -60,5 +60,11 @@ namespace GRP.Services.Controllers
             ComboBL.Update(combo);
             return Ok(combo);
         }
+
+        public IHttpActionResult DeleteCombo(int id)
+        {
+            ComboBL.Remove(id);
+            return Ok();
+        }
     }
 }
