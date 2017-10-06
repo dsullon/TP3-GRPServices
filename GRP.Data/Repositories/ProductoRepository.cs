@@ -49,7 +49,7 @@ namespace GRP.Data.Repositories
         {
             StringBuilder sql = new StringBuilder();
             sql.Append("Select codProducto as Id, nombre, elaboracion, umbralCosto as Umbral, ");
-            sql.Append("costo, precio, porciones, codCategoria as IdCategoria ");
+            sql.Append("costo, precio, porciones, codCategoria as IdCategoria, Estado ");
             sql.Append("From GRP.tb_Producto ");
             sql.Append("Where codProducto = @IdProducto");
             var data = Connection.QueryFirstOrDefault<Producto>(sql.ToString(),
@@ -65,7 +65,7 @@ namespace GRP.Data.Repositories
         {
             StringBuilder sql = new StringBuilder();
             sql.Append("Select codProducto as Id, A.nombre, elaboracion, umbralCosto as Umbral, ");
-            sql.Append("costo, precio, porciones, A.codCategoria as IdCategoria, B.Nombre as Categoria ");
+            sql.Append("costo, precio, porciones, A.codCategoria as IdCategoria, B.Nombre as Categoria, Estado ");
             sql.Append("From GRP.tb_Producto A Inner Join GRP.tb_categoria B ");
             sql.Append("On A.codCategoria = B.codCategoria ");
             var lista = Connection.Query<Producto>(sql.ToString(),
@@ -98,12 +98,14 @@ namespace GRP.Data.Repositories
             StringBuilder sql = new StringBuilder();
             sql.Append("Update GRP.tb_Producto set estado = 0 ");
             sql.Append("Where codProducto = @IdProducto");
-            var data = Connection.QueryFirstOrDefault<Producto>(sql.ToString(),
+            Connection.Execute(
+                sql.ToString(),
                 param: new
                 {
                     IdProducto = id
                 },
-                transaction: Transaction);
+                transaction: Transaction
+            );
         }
 
         public void Remove(Producto entity)

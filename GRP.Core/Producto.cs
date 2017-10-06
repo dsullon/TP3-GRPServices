@@ -13,6 +13,7 @@ namespace GRP.Core
         public int Porciones { get; set; }
         public int IdCategoria { get; set; }
         public string Categoria { get; set; }
+        public bool Estado { get; set; }
         public IList<ProductoArticulo> Insumos { get; set; }
     }
 }

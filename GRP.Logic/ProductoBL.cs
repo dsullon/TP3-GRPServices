@@ -78,5 +78,14 @@ namespace GRP.Logic
                 uow.Commit();
             }
         }
+
+        public static void Remove(int id)
+        {
+            using (var uow = new UnitOfWork())
+            {
+                uow.ProductoRepository.Remove(id);
+                uow.Commit();
+            }
+        }
     }
 }

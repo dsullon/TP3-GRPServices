@@ -108,5 +108,20 @@ namespace GRP.Services.Controllers
                 return InternalServerError(ex);
             }
         }
+
+        public IHttpActionResult DeleteCombo(int id)
+        {
+            if (id == 0)
+                return BadRequest("No se ha indicado un id válido.");
+            try
+            {
+                ProductoBL.Remove(id);
+                return Ok();
+            }
+            catch (System.Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
     }
 }
