@@ -22,3 +22,14 @@ D:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.csprojResolveAssemblyReference.cach
 D:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.csproj.CoreCompileInputs.cache
 D:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.dll
 D:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.pdb
+E:\grpservices\GRP.Logic\bin\Debug\GRP.Logic.dll
+E:\grpservices\GRP.Logic\bin\Debug\GRP.Logic.pdb
+E:\grpservices\GRP.Logic\bin\Debug\GRP.Core.dll
+E:\grpservices\GRP.Logic\bin\Debug\GRP.Data.dll
+E:\grpservices\GRP.Logic\bin\Debug\Dapper.dll
+E:\grpservices\GRP.Logic\bin\Debug\GRP.Core.pdb
+E:\grpservices\GRP.Logic\bin\Debug\GRP.Data.pdb
+E:\grpservices\GRP.Logic\bin\Debug\Dapper.xml
+E:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.csprojResolveAssemblyReference.cache
+E:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.dll
+E:\grpservices\GRP.Logic\obj\Debug\GRP.Logic.pdb

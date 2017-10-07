@@ -14,3 +14,8 @@ D:\ALEX\CURSOS\UPC\TP3\grpservices\GRP.Core\bin\Release\GRP.Core.pdb
 D:\ALEX\CURSOS\UPC\TP3\grpservices\GRP.Core\obj\Release\GRP.Core.csprojResolveAssemblyReference.cache
 D:\ALEX\CURSOS\UPC\TP3\grpservices\GRP.Core\obj\Release\GRP.Core.dll
 D:\ALEX\CURSOS\UPC\TP3\grpservices\GRP.Core\obj\Release\GRP.Core.pdb
+E:\grpservices\GRP.Core\bin\Release\GRP.Core.dll
+E:\grpservices\GRP.Core\bin\Release\GRP.Core.pdb
+E:\grpservices\GRP.Core\obj\Release\GRP.Core.csprojResolveAssemblyReference.cache
+E:\grpservices\GRP.Core\obj\Release\GRP.Core.dll
+E:\grpservices\GRP.Core\obj\Release\GRP.Core.pdb

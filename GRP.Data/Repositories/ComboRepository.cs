@@ -69,7 +69,8 @@ namespace GRP.Data.Repositories
             sql.Append("A.Estado, A.codCategoria as IdCategoria, B.Nombre as Categoria, ");
             sql.Append("FechaCreacion, FechaModificacion ");
             sql.Append("From GRP.tb_combo A Inner Join GRP.tb_categoria B ");
-            sql.Append("On A.codCategoria = B.codCategoria");
+            sql.Append("On A.codCategoria = B.codCategoria ");
+            sql.Append("Where A.estado = 1 ");
             var lista = Connection.Query<Combo>(sql.ToString(),
                 transaction: Transaction);
             return lista;

@@ -32,3 +32,14 @@ D:\ALEX\CURSOS\UPC\TP3\grpservices\GRP.Logic\bin\Release\Dapper.xml
 D:\ALEX\CURSOS\UPC\TP3\grpservices\GRP.Logic\obj\Release\GRP.Logic.csprojResolveAssemblyReference.cache
 D:\ALEX\CURSOS\UPC\TP3\grpservices\GRP.Logic\obj\Release\GRP.Logic.dll
 D:\ALEX\CURSOS\UPC\TP3\grpservices\GRP.Logic\obj\Release\GRP.Logic.pdb
+E:\grpservices\GRP.Logic\bin\Release\GRP.Logic.dll
+E:\grpservices\GRP.Logic\bin\Release\GRP.Logic.pdb
+E:\grpservices\GRP.Logic\bin\Release\GRP.Core.dll
+E:\grpservices\GRP.Logic\bin\Release\GRP.Data.dll
+E:\grpservices\GRP.Logic\bin\Release\Dapper.dll
+E:\grpservices\GRP.Logic\bin\Release\GRP.Core.pdb
+E:\grpservices\GRP.Logic\bin\Release\GRP.Data.pdb
+E:\grpservices\GRP.Logic\bin\Release\Dapper.xml
+E:\grpservices\GRP.Logic\obj\Release\GRP.Logic.csprojResolveAssemblyReference.cache
+E:\grpservices\GRP.Logic\obj\Release\GRP.Logic.dll
+E:\grpservices\GRP.Logic\obj\Release\GRP.Logic.pdb

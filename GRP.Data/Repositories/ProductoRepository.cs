@@ -68,6 +68,7 @@ namespace GRP.Data.Repositories
             sql.Append("costo, precio, porciones, A.codCategoria as IdCategoria, B.Nombre as Categoria, Estado ");
             sql.Append("From GRP.tb_Producto A Inner Join GRP.tb_categoria B ");
             sql.Append("On A.codCategoria = B.codCategoria ");
+            sql.Append("Where A.estado = 1 ");
             var lista = Connection.Query<Producto>(sql.ToString(),
                 transaction: Transaction);
             return lista;

@@ -8,3 +8,12 @@ D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Database\bin\Debug\GRP.Database.dll
 D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Database\bin\Debug\GRP.Database.pdb
 D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Database\obj\Debug\GRP.Database.dll
 D:\ALEX\CURSOS\UPC\TP3\TP3-GRPServices\GRP.Database\obj\Debug\GRP.Database.pdb
+E:\grpservices\GRP.Database\bin\Debug\GRP.Database.dacpac
+E:\grpservices\GRP.Database\bin\Debug\GRP.Database.dll
+E:\grpservices\GRP.Database\bin\Debug\GRP.Database.pdb
+E:\grpservices\GRP.Database\obj\Debug\Model.xml
+E:\grpservices\GRP.Database\obj\Debug\refactor.xml
+E:\grpservices\GRP.Database\obj\Debug\postdeploy.sql
+E:\grpservices\GRP.Database\obj\Debug\predeploy.sql
+E:\grpservices\GRP.Database\obj\Debug\GRP.Database.dll
+E:\grpservices\GRP.Database\obj\Debug\GRP.Database.pdb
